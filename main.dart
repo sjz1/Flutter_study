@@ -1,32 +1,133 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Charactor card',
-      home: MyCard(),
+      debugShowCheckedModeBanner: false,
+      title: 'BBANTO',
+      home: Grade(),
     );
   }
 }
 
-class MyCard extends StatelessWidget {
+class Grade extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 238, 170, 81),
       appBar: AppBar(
         title: Text('BBANTO'),
+        backgroundColor: Colors.amber[700],
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
         elevation: 0.0,
       ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Hello'),
-            Text('Hello'),
-            Text('Hello'),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('attach/samual.png'),
+                radius: 60.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[850],
+              thickness: 0.5,
+              endIndent: 30.0,
+            ),
+            Text(
+              'Name',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              'BBANTO',
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Text(
+              'BBANTO POWER LEVEL',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              '14',
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              children: <Widget>[
+                Icon(Icons.check_circle_outline),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'using lightsaber',
+                  style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Icon(Icons.check_circle_outline),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'face hero tattoo',
+                  style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Icon(Icons.check_circle_outline),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'fire flames',
+                  style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                )
+              ],
+            ),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('attach/veryperi.jpeg'),
+                radius: 40.0,
+                backgroundColor: Colors.amber[800],
+              ),
+            )
           ],
         ),
       ),
