@@ -5,23 +5,29 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "First app",
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(),
+      title: 'Charactor card',
+      home: MyCard(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
+class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First app'),
+        title: Text('BBANTO'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+        elevation: 0.0,
       ),
       body: Center(
         child: Column(
-          children: <Widget>[Text('Hello'), Text('Hello'), Text('Hello')],
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Hello'),
+            Text('Hello'),
+            Text('Hello'),
+          ],
         ),
       ),
     );
